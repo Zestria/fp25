@@ -17,7 +17,7 @@ let%test _ = fact 5 = 120
    Read about dune's cram tests and put the test into `demos/somefile.t`.
 *)
 
-open Lambda_lib
+open MiniML_lib
 open Parser
 
 let parse_optimistically str = Result.get_ok (parse str)
@@ -43,14 +43,14 @@ let%expect_test _ =
   [%expect {| (Abs (f, (Abs (x, (App ((Var f), (App ((Var x), (Var x))))))))) |}]
 ;;
 
-let _ = Lambda_lib.Interpret.parse_and_run
-let _ = Lambda_lib.Lambda.a
-let _ = Lambda_lib.Lambda.one
-let _ = Lambda_lib.Lambda.p
-let _ = Lambda_lib.Lambda.three
-let _ = Lambda_lib.Lambda.two
-let _ = Lambda_lib.Lambda.without_strat
-let _ = Lambda_lib.Lambda.zero
-let _ = Lambda_lib.Parser.parse_lam
-let _ = Lambda_lib.Printast.pp
-let _ = Lambda_lib.Printast.show
+let _ = MiniML_lib.Interpret.parse_and_run
+let _ = MiniML_lib.Lambda.a
+let _ = MiniML_lib.Lambda.one
+let _ = MiniML_lib.Lambda.p
+let _ = MiniML_lib.Lambda.three
+let _ = MiniML_lib.Lambda.two
+let _ = MiniML_lib.Lambda.without_strat
+let _ = MiniML_lib.Lambda.zero
+let _ = MiniML_lib.Parser.parse_lam
+let _ = MiniML_lib.Printast.pp
+let _ = MiniML_lib.Printast.show

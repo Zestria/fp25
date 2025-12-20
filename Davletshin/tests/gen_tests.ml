@@ -6,7 +6,7 @@
 
 [@@@ocaml.text "/*"]
 
-open Lambda_lib
+open MiniML_lib
 open Ast
 open Lambda
 open Utils
